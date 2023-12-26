@@ -50,7 +50,7 @@ Assumptions made on the counts:
 
 ## Future Scope
 - cover more negative test cases that handle invalid coupon/user, application of invalid coupon, verifying invalid coupon etc.
-    - Also adding more scale to it
+    - Also adding more scale in terms of numbers
 - Linking it to a low-latency db such as Redis to store the repeat count config.
 - Also using the above mentioned db to store transaction logs upto a week, and querying that instead of maintaining a single row per user per coupon count as it does now.
 - Adding roles to user, to distinguish between admin and user. 
