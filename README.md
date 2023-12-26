@@ -18,7 +18,7 @@ Execute the following command: python run.py
 The application will be accessible at http://127.0.0.1:5000/ by default.
 
 ## API Usage and Endpoints
-
+Refer to the [Postman Collection](https://github.com/anushmadubey/coupon_code_service/blob/main/docs/Coupon%20Code%20Service.postman_collection.json)
 
 
 
