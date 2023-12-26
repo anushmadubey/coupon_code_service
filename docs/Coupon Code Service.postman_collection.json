@@ -1,0 +1,274 @@
+{
+	"info": {
+		"_postman_id": "e87276be-f018-467f-b32d-6b463d26c169",
+		"name": "Coupon Code Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11679565"
+	},
+	"item": [
+		{
+			"name": "Create coupon",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "code",
+							"value": "DEFGD",
+							"type": "text"
+						},
+						{
+							"key": "discount_percentage",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "expiry_date",
+							"value": "2024-01-01",
+							"type": "text"
+						},
+						{
+							"key": "global_total_repeat_count",
+							"value": "4",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5001/coupon",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"coupon"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Coupon List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5001/coupon",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"coupon"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Anushm",
+							"type": "text"
+						},
+						{
+							"key": "email_id",
+							"value": "anushma@gmail.commm",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5001/user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5001/user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modify repeat counts",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "global_total_repeat_count",
+							"value": "1000",
+							"type": "text"
+						},
+						{
+							"key": "user_total_repeat_count",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "user_daily_repeat_count",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "user_weekly_repeat_count",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5001/coupon/DEFGD/repeat_count",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"coupon",
+						"DEFGD",
+						"repeat_count"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Repeat Counts for coupon",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5001/coupon/DEFGD/repeat_count",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"coupon",
+						"DEFGD",
+						"repeat_count"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Apply Coupon",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "coupon_code",
+							"value": "DEFGD",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5001/coupon/apply",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"coupon",
+						"apply"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verify Coupon",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5001/coupon/DEFGD/status",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"coupon",
+						"DEFGD",
+						"status"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
