@@ -53,6 +53,7 @@ Assumptions made on the counts:
     - Also adding more scale in terms of numbers
 - Linking it to a low-latency db such as Redis to store the repeat count config.
 - Also using the above mentioned db to store transaction logs upto a week, and querying that instead of maintaining a single row per user per coupon count as it does now.
+- If the data store is too big then switching to a transactional database like any NoSQL/Relational Database can be done.
 - Adding roles to user, to distinguish between admin and user. 
 
 
